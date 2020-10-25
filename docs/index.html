@@ -1,80 +1,159 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<!doctype html>
+<html lang="en">
+<head>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <title>BASH</title>
+  <base href="/">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/7.24.0/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/7.24.0/firebase-auth.js"></script>
-    <script defer src="/__/firebase/7.24.0/firebase-database.js"></script>
-    <script defer src="/__/firebase/7.24.0/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/7.24.0/firebase-storage.js"></script>
-    <script defer src="/__/firebase/7.24.0/firebase-analytics.js"></script>
-    <script defer src="/__/firebase/7.24.0/firebase-remote-config.js"></script>
-    <script defer src="/__/firebase/7.24.0/firebase-performance.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.689b7772b53f65dcc27e.css"></head>
+<body>
+  <app-root></app-root>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=AQ8kxKqilZhpqPLITVFYX2IbIGS7B4SW9cWTbhzZH8KY0QsWQ75X36BF2XDb1VY_UzyzfJshSCmowAtg"> // Required. Replace SB_CLIENT_ID with your sandbox client ID.
+  </script>
+<!-- 
+<script>
+  const allowedCardNetworks = ["AMEX", "DISCOVER", "INTERAC", "JCB", "MASTERCARD", "VISA"];
+  const allowedCardAuthMethods = ["PAN_ONLY", "CRYPTOGRAM_3DS"];
+  if (window.PaymentRequest) {
+    const request = createPaymentRequest();
+  
+    request.canMakePayment()
+        .then(function(result) {
+          if (result) {
+            // Display PaymentRequest dialog on interaction with the existing checkout button
+            document.getElementById('buyButton')
+                .addEventListener('click', onBuyClicked);
+          }
+        })
+        .catch(function(err) {
+          showErrorForDebugging(
+              'canMakePayment() error! ' + err.name + ' error: ' + err.message);
+        });
+  } else {
+    showErrorForDebugging('PaymentRequest API not available.');
+  }
+  
+  /**
+   * Show a PaymentRequest dialog after a user clicks the checkout button
+   */
+  function onBuyClicked() {
+    createPaymentRequest()
+        .show()
+        .then(function(response) {
+          // Dismiss payment dialog.
+          response.complete('success');
+          handlePaymentResponse(response);
+        })
+        .catch(function(err) {
+          showErrorForDebugging(
+              'show() error! ' + err.name + ' error: ' + err.message);
+        });
+  }
+  
+  /**
+   * Define your unique Google Pay API configuration
+   *
+   * @returns {object} data attribute suitable for PaymentMethodData
+   */
+  function getGooglePaymentsConfiguration() {
+    return {
+      environment: 'TEST',
+      apiVersion: 2,
+      apiVersionMinor: 0,
+      merchantInfo: {
+        // A merchant ID is available after approval by Google.
+        // 'merchantId':'12345678901234567890',
+        merchantName: 'Example Merchant'
+      },
+      allowedPaymentMethods: [{
+        type: 'CARD',
+        parameters: {
+          allowedAuthMethods: allowedCardAuthMethods,
+          allowedCardNetworks: allowedCardNetworks
+        },
+        tokenizationSpecification: {
+          type: 'PAYMENT_GATEWAY',
+          // Check with your payment gateway on the parameters to pass.
+          // @see {@link https://developers.google.com/pay/api/web/reference/request-objects#gateway}
+          parameters: {
+            'gateway': 'example',
+            'gatewayMerchantId': 'exampleGatewayMerchantId'
+          }
         }
-      });
-    </script>
-  </body>
+      }]
+    };
+  }
+  
+  /**
+   * Create a PaymentRequest
+   *
+   * @returns {PaymentRequest}
+   */
+  function createPaymentRequest() {
+    // Add support for the Google Pay API.
+    const methodData = [{
+      supportedMethods: 'https://google.com/pay',
+      data: getGooglePaymentsConfiguration()
+    }];
+    // Add other supported payment methods.
+    methodData.push({
+      supportedMethods: 'basic-card',
+      data: {
+        supportedNetworks:
+            Array.from(allowedCardNetworks, (network) => network.toLowerCase())
+      }
+    });
+  
+    const details = {
+      total: {label: 'Test Purchase', amount: {currency: 'USD', value: '1.00'}}
+    };
+  
+    const options = {
+      requestPayerEmail: true,
+      requestPayerName: true
+    };
+  
+    return new PaymentRequest(methodData, details, options);
+  }
+  
+  /**
+   * Process a PaymentResponse
+   *
+   * @param {PaymentResponse} response returned when a user approves the payment request
+   */
+  function handlePaymentResponse(response) {
+    const formattedResponse = document.createElement('pre');
+    formattedResponse.appendChild(
+        document.createTextNode(JSON.stringify(response.toJSON(), null, 2)));
+    document.getElementById('checkout')
+        .insertAdjacentElement('afterend', formattedResponse);
+  }
+  
+  /**
+   * Display an error message for debugging
+   *
+   * @param {string} text message to display
+   */
+  function showErrorForDebugging(text) {
+    const errorDisplay = document.createElement('code');
+    errorDisplay.style.color = 'red';
+    errorDisplay.appendChild(document.createTextNode(text));
+    const p = document.createElement('p');
+    p.appendChild(errorDisplay);
+    document.getElementById('checkout').insertAdjacentElement('afterend', p);
+  }
+  </script> -->
+
+<script src="runtime.741402d1d47331ce975c.js"></script><script src="polyfills-es5.7adef1c747f5acee0d46.js" nomodule></script><script src="polyfills.0515a49e095b5b7ee0fc.js"></script><script src="main.da21f03830fc80bae3f3.js"></script></body>
 </html>
